@@ -11,7 +11,7 @@ export default class MovieList extends Component {
       movies: [],
       title: '',
       director: '',
-      metascore: 0,
+      metascore: '',
       star1: '',
       star2: '',
       star3: ''
@@ -67,15 +67,14 @@ export default class MovieList extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const movies = [...this.state.movies]
-    movies.push([{
+    const movies = [{
       title: this.state.title,
       director: this.state.director,
       metascore: this.state.metascore,
-      stars: this.state.stars
-    }]);
+      stars: [this.state.star1, this.state.star2, this.state.star3]
+    }, ...this.state.movies]
     this.setState({
-      movies: movies,
+      movies: movies
     })
   }
 
