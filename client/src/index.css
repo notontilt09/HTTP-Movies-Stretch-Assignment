@@ -36,6 +36,43 @@ body {
   justify-content: space-between;
 }
 
+.add {
+  background-color: #fff;
+  border: 0;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 1rem auto;
+}
+
+.add h3 {
+  text-align: center;
+}
+
+.add input {
+  width: 50%;
+  margin: 10px auto;
+  font-size: 24px;
+}
+
+.add button {
+  cursor: pointer;
+  width: 50%;
+  height: 50px;
+  margin: 20px auto;
+  background: white;
+  color: black;
+  font-size: 30px;
+}
+
+.add button:hover {
+  color: white;
+  background: black;
+}
+
 .saved-list h3 {
   margin-right: 10px;
 }
