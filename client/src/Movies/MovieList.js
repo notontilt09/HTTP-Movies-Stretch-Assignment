@@ -29,39 +29,9 @@ export default class MovieList extends Component {
       .catch(err => {console.log(err)})
   }
 
-  handleTitleChange = e => {
+  handleChange = e => {
     this.setState({
-      title : e.target.value
-    })
-  }
-
-  handleDirectorChange = e => {
-    this.setState({
-      director : e.target.value
-    })
-  }
-
-  handleMetascoreChange = e => {
-    this.setState({
-      metascore : e.target.value
-    })
-  }
-
-  handleStar1Change = e => {
-    this.setState({
-      star1: e.target.value
-    })
-  }
-
-  handleStar2Change = e => {
-    this.setState({
-      star2: e.target.value
-    })
-  }
-
-  handleStar3Change = e => {
-    this.setState({
-      star3: e.target.value
+      [e.target.name] : e.target.value
     })
   }
 
@@ -89,12 +59,7 @@ export default class MovieList extends Component {
           star1={this.state.star1}
           star2={this.state.star2}
           star3={this.state.star3}
-          handleTitleChange={this.handleTitleChange} 
-          handleDirectorChange={this.handleDirectorChange}
-          handleMetascoreChange={this.handleMetascoreChange}
-          handleStar1Change={this.handleStar1Change}
-          handleStar2Change={this.handleStar2Change}
-          handleStar3Change={this.handleStar3Change}
+          handleChange={this.handleChange}
         />
         {this.state.movies.map(movie => (
           <MovieDetails key={movie.id} movie={movie} />
